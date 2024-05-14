@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/background_color"
+    tools:context=".app.create.CreatePostFragment">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edit_text"
+        android:backgroundTint="#9FC2D6BD"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Створити подію"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_edit_text"
+            android:color="@color/black"
+            android:gravity="center"
+            android:hint="@string/title_span_text"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etText"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_edit_text"
+            android:color="@color/black"
+            android:gravity="center"
+            android:hint="@string/text_span_text"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etImageUrl"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_edit_text"
+            android:color="@color/black"
+            android:gravity="center"
+            android:hint="@string/image_url_span_text"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/rbGumanitar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Гуманітарна допомога" />
+
+            <RadioButton
+                android:id="@+id/rbMedical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Медична допомога" />
+
+            <RadioButton
+                android:id="@+id/rbPsyhical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Психологічна допомога" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Створити"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

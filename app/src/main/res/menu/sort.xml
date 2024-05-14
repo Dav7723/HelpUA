@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/gumanitar"
+        android:title="Гуманітарна допомога" />
+    <item android:id="@+id/psyhical"
+        android:title="Психологічна допомога" />
+    <item android:id="@+id/medical"
+        android:title="Медична допомога" />
+    <item android:id="@+id/all"
+        android:title="Всі допомоги" />
+</menu>

@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/background_color"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:paddingLeft="5mm"
+        android:textStyle="normal"
+        android:id="@+id/row_name"
+        android:layout_margin="10dp"
+        tools:text="TITLE"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
