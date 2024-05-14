@@ -11,7 +11,7 @@ import com.app.helpua.domain.repositories.Repository
 import org.koin.dsl.module
 
 val dataModule = module {
-    single<DataSource.Auth> { AuthDataSource() }
+    single<DataSource.Auth> { AuthDataSource(get()) }
     single<DataSource.DataBase> { DataBaseDataSource()}
     single<Repository.Firebase> {FirebaseRepository(get(), get())}
 

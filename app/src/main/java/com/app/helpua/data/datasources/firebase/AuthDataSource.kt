@@ -6,6 +6,7 @@ import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.app.helpua.data.datasources.DataSource
+import com.app.helpua.data.datasources.utils.DataRepository
 import com.app.helpua.data.datasources.utils.toUser
 import com.app.helpua.domain.models.User
 import com.app.helpua.domain.utils.DEFAULT_EXCEPTION
@@ -15,7 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
-class AuthDataSource : DataSource.Auth {
+class AuthDataSource(private val dataRepository: DataRepository) : DataSource.Auth {
 
     private var auth: FirebaseAuth = Firebase.auth
 
@@ -34,6 +35,8 @@ class AuthDataSource : DataSource.Auth {
             auth.currentUser?.updateProfile(
                 UserProfileChangeRequest.Builder().setDisplayName(displayName).build()
             )
+
+            dataRepository.saveUserName(displayName)
 
             if (user != null) {
                 Log.d("User:", user.toUser().toString())
